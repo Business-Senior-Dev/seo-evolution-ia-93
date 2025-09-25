@@ -10,6 +10,7 @@ import { AuthProvider } from "@/hooks/useAuth";
 import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
 import { SuiteLayout } from "@/components/suite/SuiteLayout";
 import Index from "./pages/Index";
+import Portfolio from "./pages/Portfolio";
 import Login from "./pages/Login";
 import Suite from "./pages/Suite";
 import Portal from "./pages/Portal";
@@ -66,7 +67,8 @@ const App = () => (
         <BrowserRouter>
           <ScrollToTop />
           <Routes>
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<Portfolio />} />
+            <Route path="/old" element={<Index />} />
             <Route path="/login" element={<Login />} />
       <Route path="/portal" element={
         <ProtectedRoute allowedRoles={['client']}>
